@@ -1,7 +1,8 @@
 {
   "name": "@eiel/typescript-dddbase",
   "description": "dddbase for typescript",
-  "version": "0.0.6",
+  "version": "0.0.7",
+  "private": false,
   "author": "eiel",
   "devDependencies": {
     "@types/mocha": "^2.2.27",
