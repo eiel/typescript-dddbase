@@ -22,7 +22,11 @@ export class OnLocalStorageRepository<ID extends Identity<any>, E extends Entity
     }
 
     resolve(identity: ID): E | null {
-        var json = JSON.parse(localStorage.getItem(identity.getValue()));
+        var value = localStorage.getItem(identity.getValue())
+        if (!value) {
+            return null;
+        }
+        var json = JSON.parse(value);
         if (json) {
             return this.parse(json);
         }

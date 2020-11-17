@@ -4,7 +4,7 @@ import {Entity} from "../Entity/Entity";
 export interface Repository<ID extends Identity<any>, E extends Entity<ID>> {
     resolveOption(identity: ID): E | undefined | null;
 
-    resolve(identity: ID): E;
+    resolve(identity: ID): E | null;
 
     store(entity: E): E;
 
